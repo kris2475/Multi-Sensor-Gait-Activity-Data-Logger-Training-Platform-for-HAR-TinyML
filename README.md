@@ -233,7 +233,9 @@ The key to using this data is transforming it from the two CSV files into a **3D
 | **CNN** (Convolutional Neural Network) | **Feature Extractor** | CNNs can treat the $50 \times 9$ time window as a signal segment, automatically learning **local, translation-invariant patterns** like the precise shape of a heel strike, which simple statistics miss. |
 | **LSTM** (Long Short-Term Memory) | **Sequence Modeller** | LSTMs excel at modelling **temporal dependencies** within the 50-sample sequence, capturing how the motion evolves over the full second (e.g., smooth acceleration vs. abrupt halt). |
 
-By combining the strengths of CNNs for feature extraction and LSTMs for sequence modelling (often in a **ConvLSTM** or similar architecture), you can achieve high accuracy in predicting continuous values like $\mathbf{\text{Speed\_kph}}$ or classifying fine-grained activities like **Uphill vs. Downhill Walking**.
+By combining the strengths of CNNs for feature extraction and LSTMs for sequence modelling (often in a **ConvLSTM** or similar architecture ), you can achieve high accuracy in predicting continuous values like **Speed\_kph** or classifying fine-grained activities like **Uphill vs. Downhill Walking**.
+
+
 
 ---
 
