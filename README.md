@@ -215,13 +215,16 @@ Your device, however, combines **4 different sensor modalities**:
 
 This dataset is built to be a direct fit for the most powerful deep learning models:
 
-### **ML Dataset Transformation: Windowing & 3D Array**
+### 🤖 **ML Dataset Transformation: Windowing & 3D Array**
 
-The key to using this data is transforming it from the two CSV files into a $\mathbf{3D \text{ NumPy array}}$ required by Deep Learning models.
+The key to using this data is transforming it from the two CSV files into a **3D NumPy array** required by Deep Learning models.
 
-1.  **Windowing:** The $\mathbf{\text{/sensor.csv}}$ data is segmented into non-overlapping $\mathbf{\approx 1 \text{ second windows}}$ (e.g., $50 \text{ samples} \times 9 \text{ features}$).
-2.  **Label Alignment:** The single corresponding row from $\mathbf{\text{/gps\_label.csv}}$ is used to **label** the entire $\approx 50$ samples within that window (e.g., $\mathbf{\text{Speed\_kph} = 5.5}$).
-3.  **Final Shape:** The input data is structured as $\mathbf{(\text{Number of Windows}, \text{Time Steps}, \text{Features})}$, creating a $3\text{D}$ tensor.
+
+1.  **Windowing:** The **`/sensor.csv`** data is segmented into non-overlapping **$\approx 1$ second windows** (e.g., **$50$ samples $\times$ $9$ features**).
+2.  **Label Alignment:** The single corresponding row from **`/gps\_label.csv`** is used to **label** the entire $\approx 50$ samples within that window (e.g., **$Speed\_kph = 5.5$**).
+3.  **Final Shape:** The input data is structured as $\mathbf{(\text{Number of Windows}, \text{Time Steps}, \text{Features})}$, creating a **3D tensor**.
+
+---
 
 ### **Suitability for CNN and LSTM Architectures**
 
