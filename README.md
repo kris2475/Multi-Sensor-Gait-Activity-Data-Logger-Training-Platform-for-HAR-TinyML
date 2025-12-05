@@ -3,10 +3,6 @@
 
 This project transforms a compact ESP32-based multi-sensor device into a *fully autonomous human activity classifier*, capable of recording, understanding, and **labelling** motion in real-world environments — **without any manual annotation**.
 
-The system fuses **GPS (Neo-6M)**, **inertial data (MPU6050)**, and **magnetometer heading (QMC5883L)** into a rich activity taxonomy that spans human gait, terrain context, and even the new **Driving / Vehicle Motion** category.
-
-It is designed to feel like a professional research instrument, yet still fits into a pocket-sized ESP32 development board.
-
 ---
 
 # Hardware Architecture
@@ -191,22 +187,22 @@ This dataset is rich enough to drive:
 - Gyro low except during turns  
 - Zero body micro-oscillation $\rightarrow$ primary indicator  
 
-Driving is **shockingly easy** to detect with your sensor set — much easier than distinguishing slow walking from terrain changes.
+Driving is **shockingly easy** to detect with this sensor set — much easier than distinguishing slow walking from terrain changes.
 
-It adds depth to your dataset and allows richer context recognition for real-world movement.
+It adds depth to the dataset and allows richer context recognition for real-world movement.
 
 ---
 
 # Why This System Works So Well: Deep Learning Ready
 
-### **You are essentially building a mini research-grade motion laboratory.**
+### **I am essentially building a mini research-grade motion laboratory.**
 
 Most consumer fitness trackers rely on:
 - A 3-axis IMU (only)  
 - Proprietary filtering  
 - Hidden heuristics  
 
-Your device, however, combines **4 different sensor modalities**:
+My device, however, combines **4 different sensor modalities**:
 
 1. **GPS** (global motion + heading + environment context)  
 2. **Accelerometer** (local periodicity + impact + intensity)  
